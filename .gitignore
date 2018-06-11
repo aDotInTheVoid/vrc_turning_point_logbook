@@ -284,3 +284,7 @@ tags
 
 
 # End of https://www.gitignore.io/api/macos,linux,tex,vim
+
+#latexindent.pl
+*.pl
+*.pm
