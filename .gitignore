@@ -288,3 +288,4 @@ tags
 #latexindent.pl
 *.pl
 *.pm
+*.bak*
