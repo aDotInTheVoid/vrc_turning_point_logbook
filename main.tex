@@ -1,28 +1,89 @@
-\documentclass[a4paper]{book}
+\documentclass[a4paper, 12px]{book}
 
-\title{Team xxxxx Logbook}
-\author{Nixon Enraght-Moony 
-        \and
-        Lucas Wolman
-        \and
-        Oscar Youngman
+%defines all info for current season globally
+\newcommand*{\currentseason}[1]{\gdef\currentseason{#1}}
+\newcommand*{\currentgame}[1]{\gdef\currentgame{#1}}
+\newcommand*{\division}[1]{\gdef\division{#1}}
+
+\newcommand*{\teamname}[1]{\gdef\teamname{#1}}
+\newcommand*{\teamnumber}[1]{\gdef\teamnumber{#1}}
+
+\newcommand\blankpage{
+	\null
+    \thispagestyle{plain}
+    \begin{center}
+%   \textsc{\large The rest of this page intentionally left blank.}
+    \end{center}
+    \newpage
 }
 
+%-----------------------------------------
+% Document Information
+%-----------------------------------------
+\currentgame{VEX In The Zone} %Competition name, i.e. VEX Starstruck
+\currentseason{2018-19} %The year of competition, i.e. 2016-17
+
+\teamname{UCS: Protecc}
+\teamnumber{12345}
+
+%-----------------------------------------
+% Packages
+%----------------------------------------
 \usepackage{graphicx}
 \graphicspath{{images/}{../images/}{../../images}}
 
 \usepackage{subfiles}
 \usepackage{blindtext}
 \usepackage{gensymb}
+\usepackage{afterpage}
 
 \newcommand{\inch}[1]{#1\texttt{"}}
 
 \begin{document}
 
-\maketitle
+\frontmatter %Use Roman Numeral page numbering style for the pre-content pages
+
+%-----------------------------------------
+% Title Page
+%-----------------------------------------
+\begin{titlepage}
+	\begin{center}
+
+		\textsc{\LARGE \teamname}\\[1cm]
+		\textsc{\Large Engineering Notebook}\\[0.5cm]
+		\hrule %horizontal line
+		\hfill \\[1.5cm] %provides the space between the line and title
+		{\huge
+		\bfseries
+		\currentgame\ (\currentseason)
+		}
+		\\[1.5cm]
+		%include a picture of your robot or team logo below
+		\includegraphics[width=\textwidth]{brand/ucsLogo}
+		\\[1cm]
+		\textsc{\Large \teamnumber}\\[0.5cm] %for non worlds competitions
+		%\textsc{\Large \teamname \division}\\[0.5cm] %uncomment for worlds to input division
+
+		\vfill
+	\end{center}
+\end{titlepage}
+\afterpage{\blankpage}
+
+%-----------------------------------------
+% Table of Contents
+%-----------------------------------------
+\clearpage %used to prevent tocloft package from pushing page ahead by one
+\pagestyle{plain}
 \tableofcontents
+\clearpage
 \listoffigures
-\listoftables
+
+%-----------------------------------------
+% Document Body
+%-----------------------------------------
+\mainmatter % Begin numeric (1,2,3...) page numbering
+\pagestyle{headings}
+
 \part{Introduction}
 \subfile{sections/intro.tex}
 
