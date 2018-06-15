@@ -1,3 +1,6 @@
+all:
+	pdflatex main.tex
+
 format:
 	find . -type f -name '*.tex' -exec latexindent -w {} \; > /dev/null
 
@@ -9,3 +12,5 @@ clean:
 	find . -type f -name '*.lof'  -exec rm {} \;	
 	find . -type f -name '*.pdf'  -exec rm {} \;	
 	find . -type f -name '*.toc'  -exec rm {} \;
+
+
