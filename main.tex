@@ -1,5 +1,12 @@
 \documentclass[a4paper, 12px]{book}
 
+%-----------------------------------------
+% Commands from 
+%https://github.com/purduesigbots/
+%EngineeringNotebookTemplate/blob/
+%master/SIGBotsEngineeringNotebook.cls
+%-----------------------------------------
+
 %defines all info for current season globally
 \newcommand*{\currentseason}[1]{\gdef\currentseason{#1}}
 \newcommand*{\currentgame}[1]{\gdef\currentgame{#1}}
@@ -26,7 +33,7 @@
 \teamname{UCS: Protecc}
 \teamnumber{12345}
 
-%-----------------------------------------
+%----------------------------------------
 % Packages
 %----------------------------------------
 \usepackage{graphicx}
@@ -37,15 +44,24 @@
 \usepackage{gensymb}
 \usepackage{afterpage}
 
+%----------------------------------------
+% Commands
+%----------------------------------------
+
 \newcommand{\inch}[1]{#1\texttt{"}}
+
+%----------------------------------------
+% Document Begining
+%----------------------------------------
 
 \begin{document}
 
-\frontmatter %Use Roman Numeral page numbering style for the pre-content pages
+\frontmatter 
 
 %-----------------------------------------
 % Title Page
 %-----------------------------------------
+
 \begin{titlepage}
 	\begin{center}
 
@@ -58,7 +74,6 @@
 		\currentgame\ (\currentseason)
 		}
 		\\[1.5cm]
-		%include a picture of your robot or team logo below
 		\includegraphics[width=\textwidth]{brand/ucsLogo}
 		\\[1cm]
 		\textsc{\Large \teamnumber}\\[0.5cm] %for non worlds competitions
@@ -72,17 +87,23 @@
 %-----------------------------------------
 % Table of Contents
 %-----------------------------------------
-\clearpage %used to prevent tocloft package from pushing page ahead by one
+
+%\clearpage  %used to prevent tocloft package from pushing page ahead by one
 \pagestyle{plain}
 \tableofcontents
-\clearpage
+%\clearpage
 \listoffigures
 
 %-----------------------------------------
 % Document Body
 %-----------------------------------------
-\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\mainmatter 
 \pagestyle{headings}
+
+%----------------------------------------
+% Subfiles
+%----------------------------------------
 
 \part{Introduction}
 \subfile{sections/intro.tex}
