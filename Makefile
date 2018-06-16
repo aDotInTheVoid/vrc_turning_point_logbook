@@ -12,5 +12,5 @@ clean:
 	find . -type f -name '*.lof'  -exec rm {} \;	
 	find . -type f -name '*.pdf'  -exec rm {} \;	
 	find . -type f -name '*.toc'  -exec rm {} \;
-
+	find . -type f -name '*.out'  -exec rm {} \;
 
