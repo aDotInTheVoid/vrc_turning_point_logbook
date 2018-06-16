@@ -14,3 +14,5 @@ clean:
 	find . -type f -name '*.toc'  -exec rm {} \;
 	find . -type f -name '*.out'  -exec rm {} \;
 
+pdf:
+	pdflatex main.tex
