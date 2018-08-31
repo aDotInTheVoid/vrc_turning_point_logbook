@@ -1,2 +1,2 @@
 #!/bin/sh
-find . -type f -name '*.tex' -exec latexindent -w {} \; > /dev/null
+find . -type f -name '*.tex' -exec latexindent -w -m {} \; > /dev/null
