@@ -1,2 +1,1 @@
-
-[![Build Status](https://travis-ci.org/aDotInTheVoid/vrc_turning_point_logbook.svg?branch=master)](https://travis-ci.org/aDotInTheVoid/vrc_turning_point_logbook)
+[![Build Status](https://travis-ci.com/aDotInTheVoid/vrc_turning_point_logbook.svg?token=Arzdm9DP1WBMz6GgQyEj&branch=master)](https://travis-ci.com/aDotInTheVoid/vrc_turning_point_logbook)
